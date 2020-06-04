@@ -1,16 +1,23 @@
 <!doctype html>
 <html>
 <head>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="./turn/turn.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./turn/turn.min.js"></script>
+
 
 <style type="text/css">
 body{
 	background:#ccc;
 }
 #magazine{
-	width:1152px;
-	height:752px;
+	width:720px;
+	height:1280px;
 }
 #magazine .turn-page{
 	background-color:#ccc;
@@ -20,29 +27,36 @@ body{
 </head>
 <body>
 
-<div id="magazine">
-	<div style="background-image:url(pages/01.jpg);"></div>
-	<div style="background-image:url(pages/02.jpg);"></div>
-	<div style="background-image:url(pages/03.jpg);"></div>
-	<div style="background-image:url(pages/04.jpg);"></div>
-	<div style="background-image:url(pages/05.jpg);"></div>
-	<div style="background-image:url(pages/06.jpg);"></div>
+<div class="container-md" id="magazine">
+	<div style="background-image:url(pages/SA-CB-01.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-02.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-03.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-04.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-05.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-06.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-07.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-08.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-09.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-10.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-11.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-12.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-13.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-14.jpg);"></div>
+	<div style="background-image:url(pages/SA-CB-15.jpg);"></div>
 </div>
 
 
 <script type="text/javascript">
 
-console.log("WTF!!");
-
 	$(window).ready(function() {
 		$('#magazine').turn({
-							display: 'double',
+							display: 'single',
 							acceleration: true,
 							gradients: !$.isTouch,
 							elevation:50,
 							when: {
 								turned: function(e, page) {
-									console.log('Current view: ', $(this).turn('view'));
+									/*console.log('Current view: ', $(this).turn('view'));*/
 								}
 							}
 						});
